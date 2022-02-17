@@ -1,0 +1,53 @@
+.footer-buttons {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    overflow: hidden;
+    font: inherit;
+    color: inherit;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #eeeeee;
+    border-radius: 50%;
+    transition: color 300ms, border-color 300ms;
+
+    &:hover {
+      color: #bdae82;
+      border-color: #bdae82;
+    }
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &_play {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__image {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 24px - 4px;
+    height: 24px - 4px;
+    vertical-align: middle;
+    pointer-events: none;
+
+    &_play {
+      width: 32px - 4px;
+      height: 32px - 4px;
+    }
+  }
+}

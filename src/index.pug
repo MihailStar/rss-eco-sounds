@@ -1,0 +1,24 @@
+extends ./templates/main.pug
+
+block variables
+  -
+    const pageTitle = 'Эко звуки';
+    const pageClass = 'eco-sounds';
+    const isVisibleForRobots = false;
+
+block head
+  link(rel="preconnect", href="https://fonts.googleapis.com")
+  link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+  link(
+    rel="stylesheet",
+    href="https://fonts.googleapis.com/css2?family=Comforter&display=swap"
+  )
+
+block body
+  noscript Вам необходимо включить JavaScript, чтобы запустить это приложение
+  .eco-sounds__header
+    +header
+  .eco-sounds__main
+    +main
+  .eco-sounds__footer
+    +footer

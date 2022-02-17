@@ -1,0 +1,31 @@
+@use '../container/container';
+@use './main-button/main-button';
+
+.main {
+  background-color: transparent;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    @extend %visually-hidden;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  border: 0;
+}

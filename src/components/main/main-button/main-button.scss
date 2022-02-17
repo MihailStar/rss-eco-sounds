@@ -1,0 +1,50 @@
+.main-button {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  overflow: hidden;
+  font: inherit;
+  color: inherit;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #eeeeee;
+  border-radius: 50%;
+  transition: color 300ms, border-color 300ms;
+
+  &:hover {
+    color: #bdae82;
+    border-color: #bdae82;
+  }
+
+  &__image {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 64px - 8px;
+    height: 64px - 8px;
+    vertical-align: middle;
+    pointer-events: none;
+    transition: opacity 300ms;
+
+    &_play {
+      opacity: 1;
+
+      .main-button_pressed & {
+        opacity: 0;
+      }
+    }
+
+    &_pause {
+      opacity: 0;
+
+      .main-button_pressed & {
+        opacity: 1;
+      }
+    }
+  }
+}
